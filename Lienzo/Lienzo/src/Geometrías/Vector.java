@@ -1,5 +1,9 @@
 package Geometrías;
 
+/* LOS `private` DE LA MISMA CLASE SI SE PUEDEN ACCEDER ENTRE ELLOS */
+
+import javax.sound.midi.Soundbank;
+
 public class Vector{
 
     double x;
@@ -63,12 +67,13 @@ public class Vector{
     /********************* MAIN ****************************/
     public static void main(String[] args) {
         Punto pDest = new Punto(1,1,1);
-        Punto pOrigen = new Punto(10,10,10);
+        Punto pOrigen = new Punto(0,0,0);
 
-        Vector v1 = new Vector(pOrigen,pDest);
-        System.out.println(v1);
-        System.out.println(v1.negado());
-        System.out.println(v1.normalizado());
+        Vector v = new Vector(pOrigen, pDest);
+        System.out.println(v.norma());
+        v.rota(Math.toRadians(45),0,0);
+        System.out.println(v);
+        System.out.println(v.norma());
 
     }
 
@@ -77,10 +82,12 @@ public class Vector{
     }
 
     public void rota(double angX,double angY,double angZ){
-        // ROTACIÓN EN X
         rotaX(angX);
         rotaY(angY);
         rotaZ(angZ);
+    }
+
+    public void rota(Vector v){
 
     }
 
@@ -109,7 +116,7 @@ public class Vector{
     public void rotaZ(double angZ){
         double z = this.z;
         double y = this.y*Math.cos(angZ) - this.x*Math.sin(angZ);
-        double x = this.y*Math.cos(angZ) + this.x*Math.sin(angZ);
+        double x = this.y*Math.sin(angZ) + this.x*Math.cos(angZ);
 
         this.x = x;
         this.y = y;
