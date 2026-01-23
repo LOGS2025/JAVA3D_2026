@@ -5,13 +5,17 @@ import java.awt.*;
 
 public class Ventana extends JFrame {
 
+    public static final int ancho = 600;
+    public static final int alto = 600;
+
     Ventana(){
-        this.setSize(600,600);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
         Lienzo lienzo = new Lienzo();
         this.add(lienzo);
+        this.pack();
+        this.setResizable(false);
 
         this.setVisible(true);
     }
