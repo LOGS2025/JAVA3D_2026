@@ -76,20 +76,61 @@ public class Vector{
         return Math.sqrt(x*x + y*y + z*z);
     }
 
+    public void rota(double angX,double angY,double angZ){
+        // ROTACIÓN EN X
+        rotaX(angX);
+        rotaY(angY);
+        rotaZ(angZ);
+
+    }
+
+    public void rota(double[] angulos){
+        rota(angulos[0],angulos[1],angulos[2]);
+    }
+
+    public void rotaX(double angX){
+        double y = this.y*Math.cos(angX) + this.z*Math.sin(angX);
+        double z = this.z*Math.cos(angX) - this.y*Math.sin(angX);
+        double x = this.x;
+
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    public void rotaY(double angY){
+        double x = this.x*Math.cos(angY) - this.z*Math.sin(angY);
+        double z = this.x*Math.sin(angY) + this.z*Math.cos(angY);
+        double y = this.y;
+
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    public void rotaZ(double angZ){
+        double z = this.z;
+        double y = this.y*Math.cos(angZ) - this.x*Math.sin(angZ);
+        double x = this.y*Math.cos(angZ) + this.x*Math.sin(angZ);
+
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+
 }
 
 /*
-Para x-y
-    y' = ycos(theta) - xsen(theta)
-    x' = ysen(theta) + xcos(theta)
+Para z
+    y' = yMath.cos(angX) - xMath.sen(angX)
+    x' = yMath.sen(angX) + xMath.cos(angX)
     z' = z
-Para x-z
+Para y
     y' = y
-    x' = xcos(theta) - ysen(theta)
-    z' = xsen(theta) + zcos(theta)
-Para y-z
-    y' = ycos(theta) - zsen(theta)
+    x' = xMath.cos(angX) - yMath.sen(angX)
+    z' = xMath.sen(angX) + zMath.cos(angX)
+Para x
+    y' = yMath.cos(angX) + zMath.sen(angX)
     x' = x
-    z' = zcos(theta) - ysen(theta)
+    z' = zMath.cos(angX) - yMath.sen(angX)
 
  */
