@@ -1,5 +1,7 @@
 package Geometrías;
 
+import java.awt.*;
+
 public class Arista extends Geometria{
 
     private final Punto punto1;
@@ -11,7 +13,7 @@ public class Arista extends Geometria{
     }
 
     @Override
-    public void pintate() {
+    public void pintate(Graphics2D g2d) {
 
     }
 

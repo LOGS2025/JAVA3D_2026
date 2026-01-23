@@ -1,9 +1,11 @@
 package Geometrías;
 
+import java.awt.*;
+
 public class Punto extends Geometria {
     private double x,y,z;
 
-    Punto(double x,double y,double z){
+    public Punto(double x, double y, double z){
         this.x = x;
         this.y = y;
         this.z = z;
@@ -22,7 +24,7 @@ public class Punto extends Geometria {
 
     /********************* FUNCIONES GRÁFICAS ****************************/
         @Override
-    public void pintate() {
+    public void pintate(Graphics2D g2d) {
 
     }
 

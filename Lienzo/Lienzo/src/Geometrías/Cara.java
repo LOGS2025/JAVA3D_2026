@@ -1,5 +1,7 @@
 package Geometrías;
 
+import java.awt.*;
+
 public class Cara extends Geometria{
 
     private final Punto[] puntos;
@@ -11,14 +13,8 @@ public class Cara extends Geometria{
     }
 
     @Override
-    public void pintate() {
-        for (int i = 0; i<this.puntos.length; i++){
-            this.puntos[i].pintate();
-        }
+    public void pintate(Graphics2D g2d) {
 
-        for (int i = 0; i<this.aristas.length; i++){
-            this.aristas[i].pintate();
-        }
     }
 
     @Override

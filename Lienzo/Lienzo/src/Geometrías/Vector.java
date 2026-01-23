@@ -71,7 +71,7 @@ public class Vector{
 
         Vector v = new Vector(pOrigen, pDest);
         System.out.println(v.norma());
-        v.rota(Math.toRadians(45),0,0);
+        v.rota(Math.toRadians(90),Math.toRadians(90),Math.toRadians(90));
         System.out.println(v);
         System.out.println(v.norma());
 
