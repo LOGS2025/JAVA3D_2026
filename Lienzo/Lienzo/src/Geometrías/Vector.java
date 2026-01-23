@@ -77,3 +77,19 @@ public class Vector{
     }
 
 }
+
+/*
+Para x-y
+    y' = ycos(theta) - xsen(theta)
+    x' = ysen(theta) + xcos(theta)
+    z' = z
+Para x-z
+    y' = y
+    x' = xcos(theta) - ysen(theta)
+    z' = xsen(theta) + zcos(theta)
+Para y-z
+    y' = ycos(theta) - zsen(theta)
+    x' = x
+    z' = zcos(theta) - ysen(theta)
+
+ */
