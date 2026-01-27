@@ -12,10 +12,10 @@ public class Main {
             Sin intervención, usar switch, if, for, while y clases
             String e int
          */
-
+    /*
         Vendedor seller = new Vendedor();
         Cliente client = new Cliente();
-        Productos productos = new Productos();
+        Producto productos = new Producto();
 
         productos.rellenar_almacen(seller.stock_up());
         productos.mostrar_stock();
@@ -25,7 +25,7 @@ public class Main {
         StringBuffer producto = client.elegir_producto();
 
         System.out.println("Vendedor:");
-        seller.check_stock(producto, productos.stock, cantidad);
+        seller.check_stock(producto, productos.stock, cantidad);*/
     }
 }
 

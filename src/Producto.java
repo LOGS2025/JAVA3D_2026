@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Producto {
 
     /*int pan = 0;
@@ -37,9 +34,10 @@ public class Producto {
     }
     public Producto(String nombre, double precio){
         this.nombre=nombre;
+        this.fabricante = "Genérico";
         this.precio=precio;
     }
-    public static void main() {
+    public static void main(String[] args) {
         Producto pan = new Producto("chocolate", 20.10);
         Producto bolillo = new Producto("bolillo", 10.10);
         Producto manzana = new Producto("manzana", 30.10);
@@ -49,12 +47,17 @@ public class Producto {
             String nombre = productos[i].nombre;
             String fabricante = productos[i].fabricante;
             double precio = productos[i].precio;
-            if (nombre != null | fabricante != null) {
-                System.out.println(nombre + " : " + fabricante + " : " + precio);
+
+            if (nombre != null && fabricante != null) {
+                System.out.println(
+                        nombre +
+                        " : " +
+                        fabricante +
+                        " : " +
+                        precio);
             }
         }
     }
-
 }
 
 

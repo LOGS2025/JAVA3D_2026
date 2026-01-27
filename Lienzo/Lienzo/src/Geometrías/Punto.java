@@ -38,12 +38,14 @@ public class Punto extends Geometria {
         yPantalla = (-Ventana.alto/10.0 * yPantalla + Ventana.alto / 2.0);
 
 
-        g2d.fillOval((int) xPantalla, (int) yPantalla,20, 20);
+        g2d.fillOval((int) xPantalla, (int) yPantalla,5, 5);
     }
 
     @Override
     public void muevete(Vector vector) {
-
+        this.x += vector.x();
+        this.y += vector.y();
+        this.z += vector.z();
     }
 
     @Override
