@@ -9,7 +9,7 @@ public class Cubo extends Cuerpo {
     }
 
     public Cubo(Punto centroide, double apotema){
-        super(8);void  = new
+        super(8);
 
         this.puntos[0b000] = new Punto(
                 centroide.x()-apotema,

@@ -1,0 +1,37 @@
+//-------------Código para la clase "Punto"-----------------
+//Reemplazar el código o agregar el siguiente en el método "Muévete"
+
+    @Override
+    public void muevete(Vector vector) {
+        this.x += vector.x();
+        this.y += vector.y();
+        this.z += vector.z();
+    }
+    
+//Código para la clase Ventana, se puede agregar en cualquier línea dentro del constructor
+      this.addKeyListener(new KeyAdapter() {
+          @Override
+          public void keyPressed(KeyEvent e) {
+              if(e.getKeyChar() == 'w'){
+                  lienzo.mueveAdelante();
+              }
+              if(e.getKeyChar() == 's'){
+                  lienzo.mueveAtras();
+              }
+
+              lienzo.paintComponent(getGraphics());
+          }
+      });
+      
+//Métodos "mueveteAtras()" y "mueveteAdelante". Éstos van dentro de la clase lienzo
+//Se pueden agregar como cualquier otro método dentro de la clase.
+
+    public void mueveAdelante() {
+        punto.muevete(new Vector(0,0,0.2));
+        punto2.muevete(new Vector(0,0,0.2));
+    }
+
+    public void mueveAtras() {
+        punto.muevete(new Vector(0,0,-0.2));
+        punto2.muevete(new Vector(0,0,-0.2));
+    }
